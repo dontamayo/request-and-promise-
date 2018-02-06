@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exchange Rates</title>
+    <style>
+body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: red;}
+h3   {color: darkgreen;}
+</style>
+  </head>
+  <body>
+    <div class="centerbox" style="text-align: center;">
+    <h2 style="color:blue;">Exchange Rates</h2>
+    <h3>Currency Equivalent in per USD</h3>
+    <h3><%= data.date %></h3>
+    <% Object.keys(data.rates).map( currency => { %>
+      <p>
+        <span>
+          <%= currency %>
+        </span>:
+        <span>
+          <%= data.rates[currency] %>
+        </span>
+      </p>
+    <%}) %>
+    </div>
+  </body>
+</html>
